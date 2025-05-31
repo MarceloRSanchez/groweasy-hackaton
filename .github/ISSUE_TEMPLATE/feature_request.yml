@@ -1,0 +1,49 @@
+name: ✨ Feature request
+description: Propose a new idea or improvement
+title: "[Feat] <short description>"
+labels: ["type/feature"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Describe why** this feature matters, not only *what* it is.
+  - type: textarea
+    id: context
+    attributes:
+      label: Problem / opportunity
+      placeholder: |
+        Right now users must …  
+        This causes …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: |
+        • Add …  
+        • Change …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: ["Backend", "Mobile", "Infra", "Docs"]
+    validations:
+      required: true
+  - type: number
+    id: effort
+    attributes:
+      label: Effort estimate (story points)
+      placeholder: 3
+  - type: project
+    id: project
+    attributes:
+      label: Add to project
+      projects: ["GrowEasy 2025 Hackathon"]
+  - type: milestone
+    id: sprint
+    attributes:
+      label: Sprint / Iteration
