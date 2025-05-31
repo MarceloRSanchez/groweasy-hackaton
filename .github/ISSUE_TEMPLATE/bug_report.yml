@@ -1,0 +1,71 @@
+name: 🐞 Bug report
+description: Something is not working as expected
+title: "[Bug] <short description>"
+labels: ["type/bug", "triage"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us squash bugs!  
+        Please fill in **all** required fields — issues with missing info may be closed.
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS / Browser / Device or API endpoint + version
+      placeholder: e.g. iOS 18, Safari 18 / api/v1/payments
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: >
+        Be precise – numbered steps help us reproduce the problem.
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. Observe …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / stack traces
+      render: shell
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      multiple: false
+      options: ["S1 - blocker", "S2 - major", "S3 - minor"]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: false
+      options: ["Backend", "Mobile", "Infra", "Docs"]
+    validations:
+      required: true
+  - type: project
+    id: project
+    attributes:
+      label: Add to project
+      projects: ["GrowEasy 2025 Hackathon"]
+  - type: milestone
+    id: sprint
+    attributes:
+      label: Sprint / Iteration
